@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device width inicial-scale=1.0">
+		<meta http-equiv="x-ua-Compatible" content="ie=edge">
+        <title>Simple Calculator</title>
+        <link href="style.css" rel="stylesheet">
+        <script>
+            function ac()
+            {
+                document.getElementById("res").value="";
+            }
+            function show(input)
+            {
+                document.getElementById("res").value+=input;
+            }
+            function cal()
+            {
+                var output=eval(document.getElementById("res").value);
+                document.getElementById("res").value=output;
+            }
+        </script>
+        </head>
+        <body>
+            <table border="1" cellspacing="5px" cellpadding="5px">
+                <caption class="h"><h1>BIG CALCULATOR</h1></caption>
+            <tr>
+                <td colspan="3" align="center" bgcolor="#18034bb"> <input type="text" class="t" id="res"></td>
+                <td align="center"> <button class="b" onclick="ac()">AC</button> </td>
+            </tr>
+            <tr>
+                <td align="center"> <button class="b" onclick = "show('1')">1</button> </td>
+                <td align="center"> <button class="b" onclick = "show('2')">2</button> </td>
+                <td align="center"> <button class="b" onclick = "show('3')">3</button> </td>
+                <td align="center"> <button class="b" onclick = "show('+')">+</button> </td>
+            </tr>
+            <tr>
+                <td align="center"> <button class="b" onclick = "show('4')">4</button> </td>
+                <td align="center"> <button class="b" onclick = "show('5')">5</button> </td>
+                <td align="center"> <button class="b" onclick = "show('6')">6</button> </td>
+                <td align="center"> <button class="b" onclick = "show('-')">-</button> </td>
+            </tr>
+            <tr>
+                <td align="center"> <button class="b" onclick = "show('7')">7</button> </td>
+                <td align="center" > <button class="b" onclick = "show('8')">8</button> </td>
+                <td align="center"> <button class="b" onclick = "show('9')">9</button> </td>
+                <td align="center"> <button class="b" onclick = "show('*')">*</button> </td>
+            </tr>
+            <tr>
+                <td align="center"> <button class="b" onclick = "show('0')">0</button> </td>
+                <td align="center" > <button class="b" onclick = "show('%')">%</button> </td>
+                <td align="center"> <button class="b" onclick = "show('/')">/</button> </td>
+                <td align="center"> <button class="b" onclick = "cal()" id="e">=</button> </td>
+            </tr>
+            </table>
+            <footer>
+                <p>Copyright &copy; 2021 The BIG BISHAL Web Development.</p>
+            </footer>
+        </body>
